@@ -1,0 +1,332 @@
+/* --- VARIÁVEIS E RESET --- */
+:root {
+    --blood-primary: #8a0303;
+    --blood-dark: #3a0000;
+    --void: #050505;
+    --parchment: #c2b280;
+    --steel: #717d7e;
+    --text-main: #e0e0e0;
+    --gold: #d4af37;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--void);
+    color: var(--text-main);
+    font-family: 'Crimson Text', serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    color: var(--parchment);
+}
+
+/* --- NAVEGAÇÃO --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #000;
+    border-bottom: 2px solid var(--blood-primary);
+    padding: 0 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--blood-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 0 #333;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--blood-primary); }
+
+.game-link a {
+    color: var(--gold) !important;
+    border: 1px solid var(--gold);
+    padding: 5px 15px;
+}
+
+.game-link a:hover { background: var(--gold); color: #000 !important; }
+
+/* Hamburger Menu */
+.burger { display: none; cursor: pointer; }
+.burger div { width: 25px; height: 3px; background-color: var(--parchment); margin: 5px; transition: 0.3s; }
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/e/e0/Bataille_de_Hattin.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute; top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.hero-text { z-index: 2; position: relative; }
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem); /* Fonte responsiva */
+    text-shadow: 4px 4px 10px #000;
+    border-bottom: 3px solid var(--blood-primary);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.hero h2 { font-size: clamp(1rem, 2vw, 1.5rem); color: #bbb; margin-bottom: 10px; }
+.hero p { font-style: italic; color: var(--gold); }
+
+.scroll-down { position: absolute; bottom: 30px; z-index: 2; animation: bounce 2s infinite; }
+@keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-20px);} 60% {transform: translateY(-10px);} }
+
+/* --- CONTEÚDO GERAL --- */
+.wrapper { max-width: 1100px; margin: 0 auto; padding: 50px 20px; }
+section { margin-bottom: 100px; padding: 20px; border-left: 1px solid #222; }
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--blood-primary);
+    padding-left: 20px;
+    background: linear-gradient(90deg, #111, transparent);
+    color: var(--parchment);
+}
+
+.drop-cap {
+    font-size: 4rem; float: left; margin-right: 10px; line-height: 0.8;
+    color: var(--blood-primary); font-family: 'Cinzel', serif;
+}
+
+p { margin-bottom: 20px; font-size: 1.1rem; text-align: justify; color: #ccc; }
+
+/* --- SEÇÃO BALDUÍNO --- */
+.highlight-section { background: #0f0f0f; border: 1px solid #333; padding: 30px; }
+
+.split-layout {
+    display: flex;
+    flex-direction: row; /* Padrão Desktop */
+    gap: 40px;
+    align-items: center;
+}
+
+.text-content { flex: 1; }
+.visual-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    border: 2px solid var(--blood-dark);
+    padding: 40px;
+    min-height: 200px;
+}
+
+.quote-box {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--blood-primary);
+    font-style: italic;
+}
+
+/* --- CARDS HIERARQUIA & ARMAS --- */
+.grid-cards, .weapon-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Responsivo Automático */
+    gap: 20px;
+}
+
+.card, .weapon {
+    background: #111;
+    padding: 20px;
+    border: 1px solid #333;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card:hover, .weapon:hover { border-color: var(--blood-primary); transform: translateY(-5px); }
+.icon-svg { width: 50px; height: 50px; color: var(--steel); margin-bottom: 15px; }
+
+/* --- TIMELINE VERTICAL --- */
+.timeline-container { position: relative; max-width: 1200px; margin: 0 auto; }
+.timeline-container::after {
+    content: ''; position: absolute; width: 4px; background-color: var(--blood-primary);
+    top: 0; bottom: 0; left: 50%; margin-left: -2px;
+}
+
+.event { padding: 10px 40px; position: relative; width: 50%; box-sizing: border-box; }
+.left { left: 0; }
+.right { left: 50%; }
+
+.event::after {
+    content: ''; position: absolute; width: 20px; height: 20px;
+    right: -10px; background-color: #000; border: 3px solid var(--gold);
+    top: 15px; border-radius: 50%; z-index: 1;
+}
+.right::after { left: -10px; }
+
+.content { padding: 20px; background-color: #1a1a1a; border: 1px solid #333; }
+
+/* --- ACORDEÃO --- */
+.accordion-header {
+    background-color: #111; color: var(--parchment);
+    cursor: pointer; padding: 15px; width: 100%; border: none;
+    text-align: left; font-size: 1.1rem; border-bottom: 1px solid #333;
+    font-family: 'Cinzel', serif;
+}
+.accordion-header:hover { background-color: #222; color: var(--gold); }
+.accordion-content { padding: 0 15px; background-color: #000; max-height: 0; overflow: hidden; transition: max-height 0.2s ease-out; }
+
+/* --- ÁREA DE JOGOS --- */
+.hidden { display: none; }
+#games-content { min-height: 100vh; background-color: #080808; padding: 50px 20px; text-align: center; }
+.game-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 30px; }
+.btn-game-select {
+    padding: 10px 20px; background: #111; color: #aaa; border: 1px solid #444;
+    cursor: pointer; font-family: 'Cinzel', serif; font-size: 0.9rem;
+}
+.btn-game-select:hover { border-color: var(--blood-primary); color: #fff; }
+
+#game-stage {
+    width: 100%; max-width: 800px; height: 400px; background: #000;
+    border: 4px double var(--steel); margin: 0 auto; position: relative;
+    overflow: hidden; display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+}
+.game-btn { padding: 10px 20px; background: var(--blood-primary); color: white; border: none; font-size: 1rem; cursor: pointer; margin: 10px; font-family: 'Cinzel', serif; }
+
+/* Elementos do Jogo (CSS Shapes - SEM EMOJIS) */
+.enemy-shape {
+    width: 30px; height: 30px; background: var(--blood-primary);
+    position: absolute; cursor: crosshair; transform: rotate(45deg); /* Losango */
+    box-shadow: 0 0 10px var(--blood-primary);
+}
+
+.chalice-shape {
+    width: 60px; height: 80px;
+    background: linear-gradient(to bottom, #444, #111);
+    border: 2px solid var(--gold);
+    border-radius: 0 0 30px 30px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; position: relative;
+}
+.chalice-shape::before { /* Base do cálice */
+    content: ''; position: absolute; bottom: -10px; width: 40px; height: 10px;
+    background: var(--gold);
+}
+.chalice-shape span { font-size: 1.5rem; color: var(--gold); font-weight: bold; }
+
+/* --- RESPONSIVIDADE (MEDIA QUERIES) --- */
+@media screen and (max-width: 768px) {
+    /* Menu Mobile */
+    .nav-links {
+        position: absolute; right: 0px; height: 92vh; top: 8vh;
+        background-color: #000; flex-direction: column; align-items: center;
+        width: 70%; transform: translateX(100%); transition: transform 0.5s ease-in;
+        border-left: 1px solid var(--blood-primary);
+    }
+    .nav-links li { opacity: 0; margin: 20px 0; }
+    .burger { display: block; }
+    .nav-active { transform: translateX(0%); }
+
+    /* Layout Geral */
+    .split-layout { flex-direction: column; }
+    .hero h1 { font-size: 2.5rem; }
+    
+    /* Timeline Mobile */
+    .timeline-container::after { left: 20px; }
+    .event { width: 100%; padding-left: 50px; padding-right: 10px; margin-bottom: 20px;}
+    .event::after { left: 11px; }
+    .left, .right { left: 0; }
+    
+    /* Jogos */
+    #game-stage { height: 300px; }
+    .chalice-shape { width: 50px; height: 60px; margin: 0 10px;}
+}
+
+@keyframes navLinkFade { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0px); } }
+
+/* Animação Scroll */
+.scroll-reveal { opacity: 0; transform: translateY(50px); transition: all 1s ease-out; }
+.scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* No arquivo style.css, adicione ou modifique estas regras */
+footer {
+    text-align: center; /* Centraliza todo o conteúdo do footer */
+    padding: 40px 20px;
+    background-color: #111; /* Um fundo ligeiramente mais claro que o body */
+    border-top: 2px solid var(--blood-primary);
+}
+
+.footer-content p {
+    margin-bottom: 15px;
+    color: #888;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: var(--parchment);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--blood-primary);
+}
+
+.separator {
+    color: #555;
+}
+
+.memento {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+.sub-text {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}

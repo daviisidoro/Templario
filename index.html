@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanguis et Ferrum: A Ordem do Templo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">ORDO TEMPLI</div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="switchTab('history')">Crônicas</a></li>
+            <li><a href="#balduino" onclick="switchTab('history')">O Rei Leproso</a></li>
+            <li><a href="#hierarquia" onclick="switchTab('history')">Hierarquia</a></li>
+            <li><a href="#lendas" onclick="switchTab('history')">Mistérios</a></li>
+            <li class="game-link"><a href="#" onclick="switchTab('games')">ARENA DE JOGOS</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <main id="history-content">
+        
+        <header class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+                <h1>Non Nobis Domine</h1>
+                <h2>Não a nós, Senhor, mas ao vosso nome dai a glória.</h2>
+                <p>A ascensão e queda dos Pobres Cavaleiros de Cristo.</p>
+            </div>
+            <div class="scroll-down">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c2b280" stroke-width="2">
+                    <path d="M7 13L12 18L17 13M7 6L12 11L17 6" />
+                </svg>
+            </div>
+        </header>
+
+        <div class="wrapper">
+            
+            <section id="origem" class="scroll-reveal">
+                <h3 class="section-title">A Gênese no Sangue</h3>
+                <div class="text-block">
+                    <p><span class="drop-cap">E</span>m 1119, a Terra Santa era um matadouro. Peregrinos cristãos viajavam da costa de Jaffa para Jerusalém e eram rotineiramente massacrados, roubados ou escravizados por bandidos e exércitos sarracenos remanescentes.</p>
+                    <p>Foi neste cenário de desespero que <strong>Hugues de Payens</strong>, um nobre veterano da Primeira Cruzada, reuniu oito parentes e companheiros de armas. Eles fizeram um voto solene diante do Patriarca de Jerusalém: viveriam em pobreza, castidade e obediência, dedicando suas espadas exclusivamente à proteção dos viajantes.</p>
+                </div>
+            </section>
+
+            <section id="balduino" class="highlight-section scroll-reveal">
+                <h3 class="section-title">Balduíno IV: O Rei da Dor</h3>
+                <div class="split-layout">
+                    <div class="text-content">
+                        <p>Nenhum relato das Cruzadas possui a carga dramática e trágica de Balduíno IV. Coroado aos 13 anos, ele já carregava a sentença de morte em sua carne: a lepra.</p>
+                        <p>Enquanto seus conselheiros esperavam que ele morresse rapidamente para disputar o trono, Balduíno recusou-se a sucumbir. Ele aprendeu a montar a cavalo usando apenas os joelhos, já que não sentia as mãos para segurar as rédeas. Ele escondia seu rosto apodrecido, mas mostrava sua coragem abertamente.</p>
+                        <h4>O Milagre de Montgisard (1177)</h4>
+                        <p>O Sultão Saladino invadiu o reino com 26.000 homens. Balduíno, com apenas 16 anos e ardendo em febre, reuniu 500 cavaleiros templários e alguns milhares de soldados a pé. Em menor número (1 para 50), o Rei desceu do cavalo, prostrou-se na areia diante da relíquia da Cruz Verdadeira e orou chorando. Ao levantar, liderou a carga que quebraria o exército do Sultão.</p>
+                    </div>
+                    <div class="visual-content">
+                        <div class="quote-box">
+                            "A lepra pode devorar minha carne, mas não minha coragem. Eu sou Jerusalém."
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="hierarquia" class="scroll-reveal">
+                <h3 class="section-title">A Máquina de Guerra</h3>
+                <p class="intro-p">A Ordem funcionava como um relógio suíço feito de ferro. A disciplina era absoluta.</p>
+                
+                <div class="grid-cards">
+                    <div class="card">
+                        <h4>Grão-Mestre</h4>
+                        <p>O líder supremo. Autoridade de vida e morte. Na batalha, segurava a linha; se ele caísse, o caos reinava.</p>
+                    </div>
+                    <div class="card">
+                        <h4>O Senescal</h4>
+                        <p>O braço direito. Responsável pela administração, logística e suprimentos.</p>
+                    </div>
+                    <div class="card">
+                        <h4>O Marechal</h4>
+                        <p>O comandante de campo. Responsável por todas as armas, armaduras e cavalos.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Irmãos Cavaleiros</h4>
+                        <p>A elite de manto branco. Apenas nobres. Eram a cavalaria pesada, o tanque de guerra medieval.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="armamento" class="scroll-reveal">
+                <h3 class="section-title">Ferro e Aço</h3>
+                <div class="weapon-display">
+                    <div class="weapon">
+                        <svg class="icon-svg" viewBox="0 0 24 24"><path fill="currentColor" d="M11,0 L13,0 L13,16 L17,16 L17,18 L13,18 L13,24 L11,24 L11,18 L7,18 L7,16 L11,16 L11,0 Z"/></svg>
+                        <h5>A Espada Bastarda</h5>
+                        <p>Lâmina larga, feita para cortar cota de malha e quebrar ossos.</p>
+                    </div>
+                    <div class="weapon">
+                        <svg class="icon-svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                        <h5>O Escudo Pipa</h5>
+                        <p>Protegia do ombro à canela. Ostentava o 'Baucent'.</p>
+                    </div>
+                    <div class="weapon">
+                        <svg class="icon-svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12,2 C7,2 3,6 3,11 L3,20 L5,22 L19,22 L21,20 L21,11 C21,6 17,2 12,2 M12,4 C15.5,4 18.5,6.5 19,10 L5,10 C5.5,6.5 8.5,4 12,4 M5,12 L19,12 L19,18 L5,18 L5,12 Z"/></svg>
+                        <h5>Hauberk</h5>
+                        <p>Milhares de anéis de ferro rebitados. Pesava cerca de 15kg.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="timeline" class="scroll-reveal">
+                <h3 class="section-title">Cronologia de Sangue</h3>
+                <div class="timeline-container">
+                    <div class="event left">
+                        <div class="content">
+                            <h2>1099</h2>
+                            <p><strong>A Conquista:</strong> A Primeira Cruzada toma Jerusalém. Um massacre brutal ocorre.</p>
+                        </div>
+                    </div>
+                    <div class="event right">
+                        <div class="content">
+                            <h2>1119</h2>
+                            <p><strong>A Fundação:</strong> Hugues de Payens funda a Ordem para proteger peregrinos.</p>
+                        </div>
+                    </div>
+                    <div class="event left">
+                        <div class="content">
+                            <h2>1187</h2>
+                            <p><strong>Desastre de Hattin:</strong> Saladino aniquila o exército cruzado. Jerusalém é perdida.</p>
+                        </div>
+                    </div>
+                    <div class="event right">
+                        <div class="content">
+                            <h2>1307</h2>
+                            <p><strong>A Traição:</strong> Filipe, o Belo, ordena a prisão de todos os templários.</p>
+                        </div>
+                    </div>
+                    <div class="event left">
+                        <div class="content">
+                            <h2>1314</h2>
+                            <p><strong>A Fogueira:</strong> Jacques de Molay é queimado vivo em Paris.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="lendas" class="scroll-reveal">
+                <h3 class="section-title">Arquivos da Inquisição</h3>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">O Ídolo Baphomet</button>
+                        <div class="accordion-content">
+                            <p>Sob tortura, cavaleiros confessaram adorar uma cabeça barbada chamada Baphomet. Historiadores acreditam que era uma invenção do Rei.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">O Tesouro Perdido</button>
+                        <div class="accordion-content">
+                            <p>Na noite anterior às prisões em 1307, uma frota templária partiu de La Rochelle. O imenso ouro nunca foi encontrado.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>Sanguis et Ferrum &copy; 2026</p>
+                <div class="footer-links">
+                    <a href="#">Sobre</a>
+                    <span class="separator">|</span>
+                    <a href="#">Contato</a>
+                    <span class="separator">|</span>
+                    <a href="#">Termos</a>
+                </div>
+                <p class="memento">"Memento Mori"</p>
+                <p class="sub-text">Sic transit gloria mundi</p>
+            </div>
+        </footer>
+    </main>
+
+    <section id="games-content" class="hidden">
+        <h2 class="game-hub-title">ARENA DE TREINAMENTO</h2>
+        <p class="game-hub-subtitle">Prove seu valor, neófito.</p>
+        
+        <div class="game-controls">
+            <button class="btn-game-select" onclick="startGame('defesa')">Defesa da Muralha</button>
+            <button class="btn-game-select" onclick="startGame('quiz')">Interrogatório</button>
+            <button class="btn-game-select" onclick="startGame('codigo')">Código Templário</button>
+            <button class="btn-game-select" onclick="startGame('reflexo')">Duelo de Reflexo</button>
+            <button class="btn-game-select" onclick="startGame('calice')">Escolha o Cálice</button>
+        </div>
+
+        <div id="game-stage">
+            <div class="placeholder-game">
+                <p>SELECIONE UM DESAFIO ACIMA</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 
